@@ -6,6 +6,8 @@ public class DrawCards : MonoBehaviour
 {
     public GameObject Card1;
     public GameObject Card2;
+    public List<GameObject> open_deck;
+    public List<GameObject> discard_pile;
     public GameObject PlayerArea;
     public GameObject EnemyArea;
 
@@ -27,5 +29,10 @@ public class DrawCards : MonoBehaviour
             GameObject enemyCard = Instantiate(cards[Random.Range(0, cards.Count)], new Vector3(0, 0, 0), Quaternion.identity);
             enemyCard.transform.SetParent(EnemyArea.transform, false);
         }
+    }
+
+    public void OnDiscard()
+    {
+
     }
 }
